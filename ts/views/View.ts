@@ -17,6 +17,7 @@ export abstract class View<T> {
         if(this._escapar)
             template = template.replace(/<script>[\s\S]*?<\/script>/g, '');
         this._elemento.html( template );
+        
     }
 
      abstract template(model: T): string
